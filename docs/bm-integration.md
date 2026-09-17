@@ -9,6 +9,12 @@ STO payment details include a field named **`BankReference1`**. When an order is
 voucher, STO populates `BankReference1` with the voucher number. For PayPal payments, this field
 will instead be populated with the **PayPal transaction number**.
 
+## New payment type
+
+BM must support a new payment type: **PayPal**. BM must add this payment type as part of the
+payment details for each order. This payment type must be separate from existing payment types,
+such as credit card and voucher.
+
 ## Current behaviour: multiple orders per cart
 
 STO allows multiple orders to be presented to the user and visually grouped into a single total.
@@ -26,3 +32,11 @@ acceptable user experience.
 - Process a **single PayPal payment** for the **sum total of all orders** in the cart.
 - Sync the **same PayPal transaction number** into the `BankReference1` field in BM for **each
   individual order** in that cart.
+
+## Risks
+
+- BM currently uses the `BankReference1` field for vouchers. Specific customizations in BM link
+  to this field for voucher processing. These customizations may not work with PayPal
+  transaction numbers in this field.
+- The team must build a small proof of concept (POC). The POC must send the proposed data into
+  BM. The team must observe the results before the team approves this design.
