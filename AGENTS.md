@@ -18,6 +18,9 @@ Gateway Wrapper), the system Campion Education uses to process credit card payme
 - Prefer diagrams-as-code (e.g. Mermaid) so diagrams are diffable in version control.
 - Use clear, descriptive filenames in kebab-case (e.g. `paypal-checkout-sequence.md`).
 - Keep documents concise and structured (headings, bullet points) so they are easy to review.
+- Write all document text using **ASD-STE100 Simplified Technical English (STE)**: short
+  sentences, one instruction per sentence, active voice, approved words used consistently, and
+  avoidance of jargon, idioms, and ambiguous phrasing.
 
 ## Working in this repo
 
