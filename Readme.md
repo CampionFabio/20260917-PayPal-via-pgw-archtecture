@@ -20,6 +20,8 @@ PayPal as a supported payment method alongside existing credit card processing.
 
 ## Documents
 
+- [W4P Integration](./docs/w4p-integration.md) — how W4P refund pages must support PayPal
+  orders.
 - [PayPal Integration](./docs/paypal-integration.md) — PayPal Business Account setup, and PayPal
   workflows and technical details.
 - [STO Integration](./docs/sto-integration.md) — how STO must let the user choose a payment
