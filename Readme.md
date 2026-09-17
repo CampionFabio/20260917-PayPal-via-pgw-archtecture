@@ -25,6 +25,23 @@ The Finance department has negotiated a PayPal transaction rate that is now clos
 the existing MPGS credit card surcharge rate. Previous quotes had put the PayPal surcharge rate
 at three times the credit card rate.
 
+## Scope
+
+This proposal covers the addition of PayPal, including PayPal and PayPal Pay in 4, as a new
+payment method in STO checkout. The scope includes changes to four systems: STO, PGW, BM, and
+W4P. STO must let the customer choose PayPal at checkout, and must process a single PayPal
+payment for the total of all orders in the cart. PGW must add PayPal payment processing,
+alongside the existing MPGS credit card processing, without disruption to MPGS. BM must record
+PayPal transactions against each order, and must add PayPal as a new payment type. W4P must
+support refunds of PayPal orders under the existing refund rules. The scope also includes the
+setup of a PayPal Business Account for Campion, and the use of the Braintree SDK to connect PGW
+to PayPal.
+
+## Out of Scope
+
+- Changes to the AzureBookmasterRelay application.
+- Changes to the existing MPGS credit card checkout workflow.
+
 ## Systems Involved
 
 - **STO (Student Ordering)** — the system where payments are captured (checkout/order flow
