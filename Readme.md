@@ -15,9 +15,10 @@ those families with multiple children or high-value resource lists (eg Year 12) 
 Our current STO (Student Ordering) platform requires customers to pay the full order value at
 checkout using existing debit or credit cards only.
 
-This proposal describes the implementation of PayPal, and specifically **PayPal Pay in 4**, as
-an additional checkout option for eligible customers. PayPal Pay in 4 lets a customer split the
-cost of an order into four payments over eight weeks. This option is important now, because
+This proposal describes the implementation of PayPal, and specifically **PayPal Pay Later**, as
+an additional checkout option for eligible customers. PayPal Pay Later lets a customer split the
+cost of an order into instalments over time, most often four payments over eight weeks. This
+option is important now, because
 inflation continues to affect our customers. The impact is greater in the Dec-Jan period, the
 most expensive time of year for families. See the Benefits section for more details.
 
@@ -25,9 +26,29 @@ The Finance department has negotiated a PayPal transaction rate that is now clos
 the existing MPGS credit card surcharge rate. Previous quotes had put the PayPal surcharge rate
 at three times the credit card rate.
 
+## Problem Statement
+
+STO customers must pay the full order value at checkout today. STO offers no option to split
+payment over time. This limitation affects families with a high order value, for example
+families with multiple children, or families with a high-value resource list such as Year 12.
+The Dec-Jan period increases this impact, because this period is the most expensive time of year
+for families.
+
+The current checkout also limits payment methods to debit and credit cards. This limits customer
+choice, and does not use the lower-cost PayPal rate now available through Finance.
+
+The BRTM (Business Requirements Traceability Matrix) holds the detailed requirements for this
+solution.
+
+| Area | Key Pain Points To Address |
+| --- | --- |
+| Business process | Families with a high order value must pay the full amount upfront. This creates a barrier to purchase, particularly in the Dec-Jan period, when household costs are highest. Families have no option to split a payment over time. |
+| System / application | STO supports only one checkout payment method: existing debit or credit card processing via PGW and MPGS. STO has no PayPal integration. PGW has no PayPal token or credential structure. BM has no payment type for PayPal. W4P has no refund workflow for PayPal orders. |
+| Reporting / visibility | BM does not currently distinguish PayPal transactions from other payment types. This limits visibility into PayPal payment volume, and limits reporting on the uptake and impact of a payment plan option such as PayPal Pay Later. |
+
 ## Scope
 
-This proposal covers the addition of PayPal, including PayPal and PayPal Pay in 4, as a new
+This proposal covers the addition of PayPal, including PayPal and PayPal Pay Later, as a new
 payment method in STO checkout. The scope includes changes to four systems: STO, PGW, BM, and
 W4P. STO must let the customer choose PayPal at checkout, and must process a single PayPal
 payment for the total of all orders in the cart. PGW must add PayPal payment processing,
