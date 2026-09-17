@@ -20,6 +20,8 @@ PayPal as a supported payment method alongside existing credit card processing.
 
 ## Documents
 
+- [PGW Integration](./docs/pgw-integration.md) — new PayPal token/credential structure in PGW,
+  and the constraint to not interfere with MPGS processing.
 - [W4P Integration](./docs/w4p-integration.md) — how W4P refund pages must support PayPal
   orders.
 - [PayPal Integration](./docs/paypal-integration.md) — PayPal Business Account setup, and PayPal
