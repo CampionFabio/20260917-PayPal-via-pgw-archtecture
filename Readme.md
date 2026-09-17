@@ -7,6 +7,24 @@ PGW is the system used by Campion Education as the central component for process
 payments. This project documents the architecture, design decisions, and diagrams required to add
 PayPal as a supported payment method alongside existing credit card processing.
 
+## Project Background
+
+Back-to-school purchasing can involve a significant upfront cost for families, particularly for
+those families with multiple children or high-value resource lists (eg Year 12) are involved.
+
+Our current STO (Student Ordering) platform requires customers to pay the full order value at
+checkout using existing debit or credit cards only.
+
+This proposal describes the implementation of PayPal, and specifically **PayPal Pay in 4**, as
+an additional checkout option for eligible customers. PayPal Pay in 4 lets a customer split the
+cost of an order into four payments over eight weeks. This option is important now, because
+inflation continues to affect our customers. The impact is greater in the Dec-Jan period, the
+most expensive time of year for families. See the Benefits section for more details.
+
+The Finance department has negotiated a PayPal transaction rate that is now closely aligned with
+the existing MPGS credit card surcharge rate. Previous quotes had put the PayPal surcharge rate
+at three times the credit card rate.
+
 ## Systems Involved
 
 - **STO (Student Ordering)** — the system where payments are captured (checkout/order flow
