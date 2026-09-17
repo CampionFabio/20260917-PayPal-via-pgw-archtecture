@@ -14,6 +14,7 @@ PayPal as a supported payment method alongside existing credit card processing.
 - **PGW (Payment Gateway Wrapper)** — the central payment processing system into which PayPal is
   being integrated as a payment method.
 - **BM (Bookmaster)** — payment captures and refunds must be synchronised into BM.
+- **AzureBookmasterRelay** — the application that sends payment data from STO into BM.
 - **W4P (Web for Point of Sale)** — refunds are processed via W4P.
 - **PayPal** — the new payment method being integrated.
 

@@ -33,6 +33,11 @@ acceptable user experience.
 - Sync the **same PayPal transaction number** into the `BankReference1` field in BM for **each
   individual order** in that cart.
 
+## Constraint: no changes to AzureBookmasterRelay
+
+The team must not change the AzureBookmasterRelay application. The team must implement the
+proposed solution without changes to this application.
+
 ## Risks
 
 - BM currently uses the `BankReference1` field for vouchers. Specific customizations in BM link
