@@ -20,6 +20,8 @@ PayPal as a supported payment method alongside existing credit card processing.
 
 ## Documents
 
+- [STO Integration](./docs/sto-integration.md) — how STO must let the user choose a payment
+  method, and the checkout changes needed for PayPal.
 - [BM Integration](./docs/bm-integration.md) — how PayPal payment captures and refunds are
   synchronised into Bookmaster via AzureBookmasterRelay.
 
