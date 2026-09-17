@@ -13,6 +13,15 @@ Campion.
 
 > Technical details for account verification and setup will follow.
 
+## Payment types
+
+PayPal integration must support two payment types:
+
+1. **PayPal** — the standard PayPal payment.
+2. **PayPal Pay Later** — a PayPal payment plan that lets the customer pay over time.
+
+BM and STO must each prepare for both new payment types.
+
 ## Workflows
 
 > Workflow details will follow.

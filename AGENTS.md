@@ -21,6 +21,9 @@ Gateway Wrapper), the system Campion Education uses to process credit card payme
 - Write all document text using **ASD-STE100 Simplified Technical English (STE)**: short
   sentences, one instruction per sentence, active voice, approved words used consistently, and
   avoidance of jargon, idioms, and ambiguous phrasing.
+- Do not use "the team" as a vague actor. Phrase requirements around the needed action or
+  outcome instead (e.g. "Evaluation of X is pending" instead of "The team must evaluate X"). Name
+  a specific actor (e.g. a system or a named department) only when one is known.
 
 ## Working in this repo
 

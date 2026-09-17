@@ -16,6 +16,7 @@ STO must let the user choose a payment method. The user must choose between:
 
 1. **Existing credit card payment via PGW**.
 2. **PayPal**.
+3. **PayPal Pay Later**.
 
 ### Existing credit card payment
 
@@ -24,6 +25,6 @@ workflow, for all remaining pages.
 
 ### PayPal payment
 
-If the user chooses PayPal, a new workflow must take place.
+If the user chooses PayPal or PayPal Pay Later, a new workflow must take place.
 
 > More details about the new PayPal workflow will follow.
