@@ -17,6 +17,11 @@ PayPal as a supported payment method alongside existing credit card processing.
 - **W4P (Web for Point of Sale)** — refunds are processed via W4P.
 - **PayPal** — the new payment method being integrated.
 
+## Documents
+
+- [BM Integration](./docs/bm-integration.md) — how PayPal payment captures and refunds are
+  synchronised into Bookmaster via AzureBookmasterRelay.
+
 ## Status
 
 This repository is currently a placeholder. Content will be added incrementally as the
@@ -24,7 +29,7 @@ architecture and implementation are defined.
 
 ## Contents
 
-- `docs/` — architecture documents, decisions, and specifications (to be added)
+- `docs/` — architecture documents, decisions, and specifications
 - `diagrams/` — architecture and sequence diagrams (to be added)
 
 ## Contributing
