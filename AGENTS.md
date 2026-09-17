@@ -29,3 +29,4 @@ Gateway Wrapper), the system Campion Education uses to process credit card payme
 - Do not fabricate technical details about PGW or PayPal internals; ask the user for
   clarification when details are unknown.
 - When adding diagrams, briefly explain what they represent alongside the file.
+- Do not read the contents of files inside a `references/` folder, anywhere in this repository.
