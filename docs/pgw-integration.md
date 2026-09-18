@@ -20,4 +20,26 @@ structure to authenticate PayPal Pay in 4 workflows.
 The PayPal implementation must not interfere with payment processing via MPGS. MPGS payment
 processing must continue to work as it works today.
 
-> Technical details will follow.
+## Technical details
+
+### New PayPal service
+
+A new service must be created under `PgwBusinessLogic/PaymentGatewayApi`. This service must
+handle the business rules to interact with the PayPal SDK provided by Braintree.
+
+This new service must implement all the current methods from
+`PgwBusinessLogic.PaymentGatewayApi.BaseService`, using the Braintree SDK.
+
+### New base service method
+
+`PgwBusinessLogic.PaymentGatewayApi.BaseService` must extend with a new method:
+`CreateClientInitialisationToken`. Only the PayPal implementation must use this method. The MPGS
+implementation must return a null value from this method.
+
+### New controller action
+
+`PaymentOrderController` must extend with a new POST action, named
+`CreateClientInitialisationToken`. This action must accept a parameter named
+`GatewayConfigurationId`. This action must use `PgwBusinessLogic.PaymentGatewayApi.ServiceFactory`
+to create the client initialisation token string.
+
