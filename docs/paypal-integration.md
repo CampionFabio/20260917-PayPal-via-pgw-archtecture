@@ -13,14 +13,13 @@ Campion.
 
 > Technical details for account verification and setup will follow.
 
-## Payment types
+## Payment type
 
-PayPal integration must support two payment types:
+PayPal integration must support one payment type: **PayPal Pay in 4**. PayPal Pay in 4 is a
+PayPal payment plan that lets the customer pay in instalments, while Campion receives the full
+order amount up front from PayPal.
 
-1. **PayPal** — the standard PayPal payment.
-2. **PayPal Pay Later** — a PayPal payment plan that lets the customer pay over time.
-
-BM and STO must each prepare for both new payment types.
+BM and STO must each prepare for this new payment type.
 
 ## Workflows
 

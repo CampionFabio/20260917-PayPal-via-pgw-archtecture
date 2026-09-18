@@ -9,11 +9,11 @@ STO payment details include a field named **`BankReference1`**. When an order is
 voucher, STO populates `BankReference1` with the voucher number. For PayPal payments, this field
 will instead be populated with the **PayPal transaction number**.
 
-## New payment types
+## New payment type
 
-BM must support two new payment types: **PayPal** and **PayPal Pay Later**. BM must add these
-payment types as part of the payment details for each order. These payment types must be
-separate from existing payment types, such as credit card and voucher.
+BM must support one new payment type: **PayPal Pay in 4**. BM must add this payment type as
+part of the payment details for each order. This payment type must be separate from existing
+payment types, such as credit card and voucher.
 
 ## Current behaviour: multiple orders per cart
 

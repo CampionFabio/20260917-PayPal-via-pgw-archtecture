@@ -16,7 +16,7 @@ refunded.
 
 ## Risks
 
-- Evaluation of refund workflows for **PayPal Pay Later** orders is pending. PayPal Pay Later is
+- Evaluation of refund workflows for **PayPal Pay in 4** orders is pending. PayPal Pay in 4 is
   a payment plan, so a refund may affect the customer's remaining installments in a different way
   than a standard PayPal refund. Confirmation of the refund behaviour with PayPal is pending
   before W4P implementation.

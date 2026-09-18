@@ -15,8 +15,7 @@ STO processes payment for each order as a separate transaction. STO sends each t
 STO must let the user choose a payment method. The user must choose between:
 
 1. **Existing credit card payment via PGW**.
-2. **PayPal**.
-3. **PayPal Pay Later**.
+2. **PayPal Pay in 4**.
 
 ### Existing credit card payment
 
@@ -25,6 +24,6 @@ workflow, for all remaining pages.
 
 ### PayPal payment
 
-If the user chooses PayPal or PayPal Pay Later, a new workflow must take place.
+If the user chooses PayPal Pay in 4, a new workflow must take place.
 
 > More details about the new PayPal workflow will follow.
