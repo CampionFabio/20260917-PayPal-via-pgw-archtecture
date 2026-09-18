@@ -36,17 +36,13 @@ families with multiple children, or families with a high-value resource list suc
 The Dec-Jan period increases this impact, because this period is the most expensive time of year
 for families.
 
-The current checkout also limits payment methods to debit and credit cards. This limits customer
-choice, and does not use the lower-cost PayPal rate now available through Finance.
-
 The BRTM (Business Requirements Traceability Matrix) holds the detailed requirements for this
 solution.
 
 | Area | Key Pain Points To Address |
 | --- | --- |
 | Business process | Families with a high order value must pay the full amount upfront. This creates a barrier to purchase, particularly in the Dec-Jan period, when household costs are highest. Families have no option to split a payment over time. |
-| System / application | STO supports only one checkout payment method: existing debit or credit card processing via PGW and MPGS. STO has no PayPal integration. PGW has no PayPal token or credential structure. BM has no payment type for PayPal. W4P has no refund workflow for PayPal orders. |
-| Reporting / visibility | BM does not currently distinguish PayPal transactions from other payment types. This limits visibility into PayPal payment volume, and limits reporting on the uptake and impact of a payment plan option such as PayPal Pay in 4. |
+| System / application | STO, PGW, BM, and W4P support only full, one-time payment at checkout. None of these systems can process, record, or refund an order paid in instalments. |
 
 ## Scope
 
@@ -55,7 +51,7 @@ payment method in STO checkout. The scope includes changes to four systems: STO,
 W4P. STO must let the customer choose PayPal at checkout, and must process a single PayPal
 payment for the total of all orders in the cart. PGW must add PayPal payment processing,
 alongside the existing MPGS credit card processing, without disruption to MPGS. BM must record
-PayPal transactions against each order, and must add PayPal as a new payment type. W4P must
+PayPal transactions against each order, and must add PayPal Pay in 4 as a new payment type. W4P must
 support refunds of PayPal orders under the existing refund rules. The scope also includes the
 setup of a PayPal Business Account for Campion, and the use of the Braintree SDK to connect PGW
 to PayPal.
@@ -74,7 +70,8 @@ to PayPal.
 - **BM (Bookmaster)** — payment captures and refunds must be synchronised into BM.
 - **AzureBookmasterRelay** — the application that sends payment data from STO into BM.
 - **W4P (Web for Point of Sale)** — refunds are processed via W4P.
-- **PayPal** — the new payment method being integrated.
+- **PayPal** — the new payment provider being integrated, via the **PayPal Pay in 4** payment
+  type.
 
 ## Documents
 
