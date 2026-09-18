@@ -20,7 +20,25 @@ BM and STO must each prepare for this new payment type.
 
 ## Workflows
 
-> Workflow details will follow.
+### Braintree client initialisation
+
+This sequence diagram shows how STO or W4P initialises the Braintree JavaScript SDK in the
+browser. This is the first step in both the PayPal Pay in 4 payment workflow and the PayPal Pay
+in 4 refund workflow.
+
+![Braintree client initialisation sequence](../images/sequence-ini-braintree.png)
+
+The steps are:
+
+1. The browser sends a `CreateClientToken` request to STO or W4P.
+2. STO or W4P sends a `CreateClientToken` request to PGW.
+3. PGW sends a `CreateClientToken` request to Braintree.
+4. Braintree returns the client token response to PGW.
+5. PGW returns the client token response to STO or W4P.
+6. STO or W4P returns the client token response to the browser.
+7. The browser uses the client token to initialise the Braintree client.
+
+> Workflow details for payment capture and refund will follow.
 
 ## Technical details
 
