@@ -7,13 +7,13 @@ and refunds using these tokens via **MPGS (Mastercard Payment Gateway System)**.
 
 ## Proposed changes
 
-PGW must apply business rules to PayPal analogous to the business rules it applies to MPGS
-today. These rules cannot be the same rules, because PayPal follows a slightly different
-workflow than MPGS when it processes a payment. PGW must support token creation, payment
-capture, and refunds for PayPal, based on the same rules it uses for MPGS.
+PGW must support PayPal Pay in 4 with business rules analogous to the business rules it applies
+to MPGS today, for token creation, payment capture, and refunds. These rules cannot be the same
+rules as the MPGS rules, because PayPal Pay in 4 follows a slightly different workflow than MPGS
+when it processes a payment.
 
-PGW must have a new structure to save PayPal credentials. PGW must use this structure to process
-PayPal payments and refunds.
+PGW must have a new structure to save the PayPal business credentials. PGW will use this
+structure to authenticate PayPal Pay in 4 workflows.
 
 ## Constraint: no interference with MPGS
 
