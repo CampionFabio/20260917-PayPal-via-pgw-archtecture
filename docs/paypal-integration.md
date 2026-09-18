@@ -38,7 +38,32 @@ The steps are:
 6. STO or W4P returns the client token response to the browser.
 7. The browser uses the client token to initialise the Braintree client.
 
-> Workflow details for payment capture and refund will follow.
+### Braintree payment
+
+This sequence diagram shows the expected PayPal Pay in 4 payment flow. This flow follows the
+Braintree client initialisation flow, described above.
+
+![Braintree payment sequence](../images/sequence-braintree-payment.png)
+
+The steps are:
+
+1. The browser initialises the Braintree client, from the client initialisation flow.
+2. The user clicks the "Pay in 4" button.
+3. The browser sends a request for PayPal authentication to PayPal.
+4. The customer approves the payment in PayPal.
+5. PayPal returns the approval to the browser.
+6. The Braintree SDK, in the browser, generates a payment nonce. A nonce is a one-time reference
+   to the approved payment. The nonce does not contain the customer's raw payment credentials.
+7. The browser sends the payment request, with the nonce, to STO.
+8. STO sends the payment request, with the nonce, to PGW.
+9. PGW sends the payment request, with the nonce, to Braintree.
+10. Braintree sends a payment capture request to PayPal.
+11. PayPal returns the payment capture response to Braintree.
+12. Braintree returns the transaction response to PGW.
+13. PGW returns the payment response to STO.
+14. STO returns the payment response to the browser.
+
+> Workflow details for refund will follow.
 
 ## Technical details
 
