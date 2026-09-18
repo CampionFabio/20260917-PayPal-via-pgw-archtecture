@@ -8,9 +8,6 @@ technical details for PayPal use in this project.
 PayPal use requires a **PayPal Business Account**. The finance department must create a Campion
 Business account on the PayPal website: <https://www.paypal.com/us/business>.
 
-The finance department must first check if a PayPal Business Account already exists for
-Campion.
-
 > Technical details for account verification and setup will follow.
 
 ## Payment type
