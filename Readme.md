@@ -73,6 +73,10 @@ to PayPal.
 - **PayPal** — the new payment provider being integrated, via the **PayPal Pay in 4** payment
   type.
 
+## References
+
+- Initiative Canvas: [IDEA-247](https://campioneducation.atlassian.net/browse/IDEA-247)
+
 ## Documents
 
 - [PGW Integration](./docs/pgw-integration.md) — new PayPal token/credential structure in PGW,
