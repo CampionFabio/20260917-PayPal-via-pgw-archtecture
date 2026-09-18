@@ -10,15 +10,21 @@ STO processes payment for each order as a separate transaction. STO sends each t
 1. **PGW** — for payment processing.
 2. **BM** — for payment data update.
 
-The image below shows the current payment section of the checkout page. STO shows this section
-to the user today, with no payment method choice.
+When the user navigates to the checkout page, STO queries PGW for the available payment methods.
+PGW currently returns only **MPGS**. STO shows the payment section for the returned payment
+method, with no payment method choice.
+
+The image below shows the current payment section of the checkout page.
 
 ![Current STO payment section](../images/STO-payment-section-current.png)
 
 ## Proposed changes
 
-STO must add a payment method selection button above the payment section. The user must first
-choose one of two options:
+PGW must return both **MPGS** and **PayPal Pay in 4** as available payment methods, when STO
+queries PGW on checkout navigation.
+
+STO must add a payment method selection button above the payment section, based on the payment
+methods PGW returns. The user must first choose one of two options:
 
 1. **Credit card payment**.
 2. **PayPal Pay in 4**.
